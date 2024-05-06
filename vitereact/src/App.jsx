@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import Counter from "./Counter";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,8 @@ function App() {
   return (
     <>
       <div  className="container mx-auto p-10 border  bg-green-50 shadow-xl shadow-cyan-500/50" >
+      <button className="bg-cyan-400 p-2 rounded-xl  cursor-pointer hover:bg-cyan-200 hover:text-black"><a href="">Go to Counter</a></button>
+
         <h1 className="font-semibold text-green-700 text-xl">React Counter </h1>
         <p className="my-2">
           A paragraph is defined as “a group of sentences or a single sentence
@@ -34,14 +37,17 @@ function App() {
 
         </div>
        
-        <div className="container text-center p-4 bg-zinc-200 rounded mt-4">
+        <div className="container text-center p-4 bg-zinc-200 rounded mt-4 shadow-green-200/50">
         <h1 className="text-xl mb-4 font-semibold">Counter Value : <span className="font-bold text-green-950">{count}</span> </h1>
-         <button onClick={() =>setCount(count +1)} className="bg-green-400 p-2 rounded-xl  cursor-pointer hover:bg-green-200 hover:text-black mr-1">Increment</button>
+         <button onClick={() =>setCount(count +1)} className="bg-green-400 p-2 rounded-xl  cursor-pointer hover:bg-green-200 hover:text-black mr-1 border-green-950">Increment</button>
         <button onClick={decrement} className="bg-orange-400 p-2 rounded-xl  cursor-pointer hover:bg-orange-200 hover:text-black mr-1">Decrement</button>
         <button onClick={()=>setCount(0)} className="bg-cyan-400 p-2 rounded-xl  cursor-pointer hover:bg-cyan-200 hover:text-black">Reset to 0</button>
 
         </div>
        
+      </div>
+      <div>
+        <Counter/>
       </div>
     </>
   );
