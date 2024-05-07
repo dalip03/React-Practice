@@ -7,8 +7,9 @@ function Counter(){
     let [count, setCount] = useState(0);
 
     const  increament= () =>{
+        if(count<20){
         setCount(count+1)
-    }
+    }}
 
         const decreament = ()=>{
             if(count > 0){
@@ -23,7 +24,7 @@ function Counter(){
         <h1 className="text-xl mb-4 font-semibold">Counter Value : <span className="font-bold text-green-950">{count}</span> </h1>
          <button onClick={increament}  className="bg-green-400 p-2 rounded-xl  cursor-pointer hover:bg-green-200 hover:text-black mr-1 border-green-950">Increment</button>
         <button onClick={decreament} className="bg-orange-400 p-2 rounded-xl  cursor-pointer hover:bg-orange-200 hover:text-black mr-1">Decrement</button>
-        <button onClick={()=>setCount(0)} className="bg-cyan-400 p-2 rounded-xl  cursor-pointer hover:bg-cyan-200 hover:text-black">Reset</button>
+        <button onClick={()=>setCount(0)} className="bg-cyan-400 p-2 rounded-xl  cursor-pointer hover:bg-cyan-200 hover:text-black">Reset {count}</button>
         </div>
         </div>
     )
