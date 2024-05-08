@@ -4,7 +4,6 @@ function Background() {
 
     const [color ,setColor] = useState("teal");
 
-
   return (
     <div style={{backgroundColor:color}} className=" p-10 w-full h-screen duration-200">
       <h1>This is background page</h1>
